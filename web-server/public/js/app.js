@@ -22,9 +22,8 @@ weatherForm.addEventListener('submit', (e) => {
     if (!search) {
         console.log('Please enter a value for location')
         messageOne.textContent = 'Please enter a value for location'
-
     } else {
-        fetch('http://localhost:3000/weather?address='+search.value).then((response) => {
+        fetch('/weather?address='+search.value).then((response) => {
             response.json().then((data) => {
                 if (data.error) {
                     console.log(data.error)

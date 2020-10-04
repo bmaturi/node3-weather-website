@@ -5,10 +5,13 @@ const hbs = require('hbs')
 
 const app = express()
 
-console.log(__dirname)
+// if exists use env or default 3000
+const port = process.env.PORT || 3000
+
+/*console.log(__dirname)
 console.log(__filename)
 
-console.log(path.join(__dirname, '..', 'public'))
+console.log(path.join(__dirname, '..', 'public'))*/
 
 // Define path for express config
 const publicDirPath = path.join(__dirname, '..', 'public')
@@ -85,6 +88,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port : '+port)
 })
