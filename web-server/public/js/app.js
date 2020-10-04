@@ -10,12 +10,13 @@ const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
+const icon = document.getElementById("icon")
 
 messageOne.textContent = ''
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log('Form Submitted : '+search.value)
+
     messageOne.textContent = ''
     messageTwo.textContent = ''
 
@@ -32,6 +33,7 @@ weatherForm.addEventListener('submit', (e) => {
                     console.log(data)
                     messageOne.textContent = data.name
                     messageTwo.textContent = data.desc
+                    icon.src = data.icon
                 }
             })
         })

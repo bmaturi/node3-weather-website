@@ -14,7 +14,8 @@ const getCurrentWeather = (city_name = 'Hyderabad', callback) => {
                 name: response.body.location.name,
                 desc: current.weather_descriptions[0],
                 temperature: current.temperature,
-                precip: current.precip
+                precip: current.precip,
+                icon: current.weather_icons[0]
             })
         }
     })
