@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "request": "^2.88.2",
-    "yargs": "^16.0.3"
+    "yargs": "^16.0.3",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1"
   }
 }
