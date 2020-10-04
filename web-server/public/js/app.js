@@ -30,7 +30,6 @@ weatherForm.addEventListener('submit', (e) => {
                     console.log(data.error)
                     messageOne.textContent = data.error
                 } else {
-                    console.log(data)
                     messageOne.textContent = data.name
                     messageTwo.textContent = data.desc
                     icon.src = data.icon
